@@ -1,5 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&family=Montserrat:wght@400;500;600&display=swap');
+:root {
+    --main-color: #FFFFFF;
+    --secondary-color: #ded9d9;
+    --third-color: #9c9c9c;
+    --title-color: #161616;
 
-
+}
 
 * {
     margin: 0;
@@ -7,21 +13,70 @@
     box-sizing: border-box;
 }
 
-.overlay {
-    position: absolute;
-   top: 0;
-   left: 0;
-   width: 100%;
-   height: 100%;
-   background-color: hsl(0, 0%, 0%, 0.6);
-   opacity: 0.6;
-}
-
-.bg-img {
-    background: url(/bgimgs/1.jpg) center no-repeat;
-    background-size: cover;
+body, html {
+    background-color: var(--main-color);
     width: 100%;
     height: 100vh;
-    z-index: 1;
+    font-family: 'Manrope', sans-serif;
 }
 
+a, li {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.box {
+    display: grid;
+    grid-template-columns: ;
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    bottom: 2rem;
+    left: 2rem;
+    border: 1px solid var(--secondary-color);
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(24, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+    width: 100%;
+    height: 100vh;
+    background-color: var(--main-color);
+   
+}
+
+.nav-box {
+    grid-column: 1 / span 15;
+    grid-row: 1 / span 16;
+    background-color: var(--title-color);
+    z-index: 2;
+}
+
+.img-container {
+    grid-column: 3 / span 16;
+    grid-row: 3 / span 12;
+    background-color: rgb(105, 7, 7);
+    z-index: 3;
+}
+
+.socials {
+    grid-column: 1 / span 1;
+    grid-row: 3 / span 12;
+    background-color: var(--main-color);
+    z-index: 2;
+}
+
+.projects  {
+    grid-column: 3 / span 3;
+    grid-row: 16 / span 1;
+    background-color: var(--main-color);
+    z-index: 6;
+    color: var(--title-color);
+    padding: .5rem;
+    text-align: center;
+    text-transform: uppercase;
+    outline:  none;
+    border: none;
+    cursor: pointer;
+}
